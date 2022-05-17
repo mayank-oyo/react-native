@@ -34,7 +34,7 @@ var styles = StyleSheet.create({
 
 AppRegistry.registerComponent("main", () => App)   // Required by EXPO
 AppRegistry.registerComponent("MyReactNativeApp", () => App); // Required by android,ios every component needs to be registered
-AppRegistry.registerComponent("Component1", () => Component1); // Required by android,ios
+AppRegistry.registerComponent("Component1", () => Component1); // Required by android,ios only
 
 // Required by web only. Need to comment out when using android/ios
 // AppRegistry.runApplication("MyReactNativeApp", {
