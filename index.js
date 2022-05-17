@@ -1,6 +1,5 @@
 import React from "react";
-import { AppRegistry, StyleSheet, Text, View } from "react-native";
-import {Button,Divider}  from 'react-native-paper' ;
+import { AppRegistry, StyleSheet, Text, View, Button } from "react-native";
 import Component1 from "./components/component1";
 
 const theme = {
@@ -10,19 +9,17 @@ const theme = {
   },
 };
 
-class HelloWorld extends React.Component {
+class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
         <Text style={styles.hello}>Hello world from React Native</Text>
-        <Divider />
-        <Button primary>
-    React Native Paper Component2
-  </Button>
-  </View>
+        <Button title="Dummy button component" />
+      </View>
     );
   }
 }
+
 var styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -34,10 +31,12 @@ var styles = StyleSheet.create({
     margin: 10
   }
 });
-AppRegistry.registerComponent("main", () => HelloWorld)
-AppRegistry.registerComponent("MyReactNativeApp", () => HelloWorld);
-AppRegistry.registerComponent("Component1", () => Component1);
 
-/*AppRegistry.runApplication("MyReactNativeApp", {
-  rootTag: document.getElementById("root")
-});*/
+AppRegistry.registerComponent("main", () => App)   // Required by EXPO
+AppRegistry.registerComponent("MyReactNativeApp", () => App); // Required by android,ios every component needs to be registered
+AppRegistry.registerComponent("Component1", () => Component1); // Required by android,ios
+
+// Required by web only. Need to comment out when using android/ios
+// AppRegistry.runApplication("MyReactNativeApp", {
+//   rootTag: document.getElementById("root")
+// });

@@ -30,9 +30,9 @@ public class HybridActivity extends AppCompatActivity implements DefaultHardware
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hybrid);
-        Fragment reactNativeFragment = new ReactFragment.Builder()
-                .setComponentName("Component1")
-                .build();
+//        Fragment reactNativeFragment = new ReactFragment.Builder()
+//                .setComponentName("Component1")
+//                .build();
 
         Fragment reactNativeFragment2 = new ReactFragment.Builder()
                 .setComponentName("MyReactNativeApp")
@@ -40,7 +40,7 @@ public class HybridActivity extends AppCompatActivity implements DefaultHardware
 
         getSupportFragmentManager()
                 .beginTransaction()
-                .add(R.id.reactNativeFragment, reactNativeFragment)
+//                .add(R.id.reactNativeFragment, reactNativeFragment)
                 .add(R.id.reactNativeFragment2, reactNativeFragment2)
                 .commit();
 
